@@ -11,6 +11,6 @@ while True:
 	if a == 'o':
 		sock.connect((esp,port))
 		sock.send('g'.ljust(16))		# Windows和 Linux應該可以直接發送
-		data = s.recv(1024)
+		data = sock.recv(1024)
 		sock.close()
 		print(data)
