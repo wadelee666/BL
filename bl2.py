@@ -1,10 +1,10 @@
 import bluetooth
 
-socket.setdefaulttimeout(5)
+
 esp = 'C4:4F:33:3A:5B:83'
 port = 1
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-
+sock.setdefaulttimeout(5)
  
 while True:
 	a = input()
