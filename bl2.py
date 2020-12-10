@@ -13,11 +13,13 @@ while True:
 		data = sock.recv(1)
 		sock.close()
 		print(data)
-	if a == 'H':
+	if a == 'h':
 		sock.connect((esp,port))
 		sock.send('H')
 		sock.close()
-	if a == 'L':
+	if a == 'l':
 		sock.connect((esp,port))
 		sock.send('L')
 		sock.close()
+	if a == 'k':
+		break
