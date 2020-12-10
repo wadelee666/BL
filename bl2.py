@@ -7,10 +7,17 @@ sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
  
 while True:
 	a = input()
-
 	if a == 'o':
 		sock.connect((esp,port))
 		sock.send('g'.ljust(16))		# Windows和 Linux應該可以直接發送
-		data = sock.recv(1024)
+		data = sock.recv(1)
 		sock.close()
 		print(data)
+	if a == 'H':
+		sock.connect((esp,port))
+		sock.send('H')
+		sock.close()
+	if a == 'L':
+		sock.connect((esp,port))
+		sock.send('L')
+		sock.close()
